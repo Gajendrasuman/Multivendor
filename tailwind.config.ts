@@ -9,10 +9,21 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'lobster': ['Lobster', 'cursive'],
+        'kaushan': ['Kaushan Script', 'cursive'],
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "grad": "linear-gradient (to right, #4361ee, #ff7400)",
+      },
+      colors: {
+        "default": "#ff7400",
+        "default-alt": "#4361ee",
+        "default-gray": "#666",
+        "dark": "#000b"
+      },
+      animation: {
+        'spin-slow': 'spin 50s linear infinite',
       },
     },
   },
