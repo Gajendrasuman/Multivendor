@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/icofont.css"
@@ -10,12 +11,14 @@ export const metadata: Metadata = {
   description: "MugenSoro is a Multivendor System for Hackathon 2024 in Shr Ram college Gwalior",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode;}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
