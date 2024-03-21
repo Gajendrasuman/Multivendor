@@ -15,14 +15,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <ClerkProvider>
+  
             <html lang="en">
+                <ClerkProvider>
                 <body className={inter.className}>
                     <NextTopLoader />
                     <Navbar />
                     {children}
                 </body>
+                </ClerkProvider>
             </html>
-        </ClerkProvider>
+        
     );
 }
